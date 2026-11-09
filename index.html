@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela de Conducción Ecuador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Escuela de Conducción "Ruta Segura"</h1>
+        <nav>
+            <ul id="menu">
+                <li><a href="#" data-target="inicio" class="active">Inicio</a></li>
+                <li><a href="#" data-target="cursos">Cursos y Licencias</a></li>
+                <li><a href="#" data-target="agendar">Agendar Clase</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Vista 1: Inicio -->
+        <section id="inicio" class="vista activa">
+            <h2>Bienvenido a nuestra escuela</h2>
+            <p>Aprende a conducir con los mejores instructores del país. Nos especializamos en licencias no profesionales válidas en todo el Ecuador.</p>
+            <p>Nuestra metodología te garantiza aprender desde cero de forma segura y responsable.</p>
+        </section>
+
+        <!-- Vista 2: Cursos y Licencias -->
+        <section id="cursos" class="vista">
+            <h2>Nuestras Licencias (No Profesionales)</h2>
+            <ul>
+                <li><strong>Tipo A:</strong> Para conducción de vehículos motorizados como ciclomotores, motocicletas, tricar y cuadrones.</li>
+                <li><strong>Tipo B:</strong> Para automóviles y camionetas con capacidad de carga de hasta 1.75 toneladas o pasajeros hasta 8 asientos.</li>
+                <li><strong>Tipo F:</strong> Para automotores especiales adaptados a personas con discapacidad.</li>
+            </ul>
+            <div class="info-curso">
+                <h3>Detalles del Curso</h3>
+                <p><strong>Duración:</strong> 1 semana corrida.</p>
+                <p><strong>Tiempo por clase:</strong> 1 hora y 30 minutos diarios.</p>
+                <p><strong>Días:</strong> Lunes a Viernes <em>(Sábados y domingos no se imparten cursos)</em>.</p>
+            </div>
+        </section>
+
+        <!-- Vista 3: Agendar Clase -->
+        <section id="agendar" class="vista">
+            <h2>Agendar un Curso</h2>
+            <form id="formulario-agendamiento">
+                <div class="grupo-form">
+                    <label for="nombre">Nombre del Estudiante:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez">
+                </div>
+                
+                <div class="grupo-form">
+                    <label for="licencia">Tipo de Licencia:</label>
+                    <select id="licencia" name="licencia">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Tipo A">Tipo A (Motos)</option>
+                        <option value="Tipo B">Tipo B (Autos)</option>
+                        <option value="Tipo F">Tipo F (Discapacidad)</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="profesor">Profesor Asignado:</label>
+                    <select id="profesor" name="profesor">
+                        <option value="">Seleccione un profesor</option>
+                        <option value="Carlos Almeida">Carlos Almeida</option>
+                        <option value="María Fernanda">María Fernanda</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="fecha">Fecha de Inicio:</label>
+                    <input type="date" id="fecha" name="fecha">
+                    <small>Recuerde: Los cursos inician solo de lunes a viernes.</small>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="horario">Horario (1h 30m de duración):</label>
+                    <select id="horario" name="horario">
+                        <option value="">Seleccione un horario</option>
+                        <option value="08:00 - 09:30">08:00 - 09:30</option>
+                        <option value="10:00 - 11:30">10:00 - 11:30</option>
+                        <option value="14:00 - 15:30">14:00 - 15:30</option>
+                    </select>
+                </div>
+
+                <button type="submit">Agendar Curso</button>
+                <div id="mensaje-error" class="error"></div>
+            </form>
+
+            <div id="lista-agendados">
+                <h3>Cursos Agendados Recientemente:</h3>
+                <ul id="registro-cursos">
+                    <!-- Aquí se agregarán los cursos con JavaScript -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Escuela de Conducción "Ruta Segura".</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
